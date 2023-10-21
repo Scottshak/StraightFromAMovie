@@ -1,4 +1,3 @@
-// @ts-check
 const { test } = require('@playwright/test');
 import {POManager} from '../pages/POManager';
 import {LoginPage} from '../pages/LoginPage';
@@ -12,9 +11,8 @@ test.describe("Broken Links on Straight From a Movie ", async() => {
     context = await browser.newContext();
     page = await context.newPage(); 
     poManager = new POManager(page);
-    // loginPage = await poManager.getLoginPage();
+    // loginPage = poManager.getLoginPage();
     loginPage = new LoginPage(page);
-    console.log("here no issues");
     await loginPage.validLogin(username, password);
   });
 });

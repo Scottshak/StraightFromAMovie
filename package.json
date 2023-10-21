@@ -7,10 +7,11 @@
     "test": "npx playwright test"
   },
   "keywords": [],
-  "author": "",
+  "author": "Scottshak",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.39.0",
+    "playwright": "^1.39.0",
     "@types/node": "^20.8.7",
     "dotenv": "^16.3.1"
   }

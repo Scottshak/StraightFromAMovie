@@ -1,7 +1,7 @@
 const { expect } = require("@playwright/test");
 import {dashboardString} from '../testData/data.json';
 
-class LoginPage {
+export class LoginPage {
 
   constructor(page) {
     this.page = page;
