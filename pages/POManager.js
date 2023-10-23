@@ -1,13 +1,20 @@
-import {LoginPage} from '../pages/LoginPage';
+import { LoginPage } from "./LoginPage";
+import { DashboardPage } from "./DashboardPage";
 
-export class POManager {
-    constructor (page) {
-        this.page = page;
-        this.loginPage = new LoginPage();
-    }
-    getLoginPage () {
-        return this.loginPage;
-    }
+class POManager {
+  constructor(page) {
+    this.page = page;
+    this.loginPage = new LoginPage(this.page);
+    this.dashboardPage = new DashboardPage(this.page);
+  }
+
+  getLoginPage() {
+    return this.loginPage;
+  }
+
+  getDashboardPage() {
+    return this.dashboardPage;
+  }
 }
 
-module.exports = {POManager};
+module.exports = { POManager };
